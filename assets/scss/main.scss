@@ -1374,12 +1374,9 @@
 
 	#banner {
 		background-attachment:	scroll,							fixed;
-		background-color:		#666;
-		background-image:		url({{ "img/overlay.png" | absURL }}), url({{ .Site.Params.Banner.image | absURL }});
 		background-position:	top left,						center center;
 		background-repeat:		repeat,							no-repeat;
 		background-size:		auto,							cover;
-		color: #fff;
 		padding: 12em 0 20em 0;
 		text-align: center;
 
@@ -1387,14 +1384,9 @@
 			margin-bottom: 0;
 		}
 
-		h2, h3, h4, h5, h6 {
-			color: #fff;
-		}
-
 		h2 {
 			font-size: 3.5em;
-			line-height: 1em;
-			margin: 0 0 0.5em 0;
+            margin: 0;
 			padding: 0;
 		}
 
@@ -1409,7 +1401,7 @@
 		.button {
 			background-color: transparent;
 			box-shadow: inset 0 0 0 2px rgba(255,255,255,0.5);
-			color: #fff;
+			color: black;
 			min-width: 12em;
 
 			&:hover {
@@ -2146,4 +2138,8 @@
 
 .mapboxgl-popup-content {
 	text-align: left;
+}
+
+#box-services {
+    padding: 1em;
 }

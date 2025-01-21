@@ -17,7 +17,9 @@
               maxZoom: {{- int .zoom -}}
             }
         ).addTo(mymap);
-          var marker = L.marker(loc).addTo(mymap);
+        for (const pt of {{- .points -}}) {
+          var marker = L.marker(pt).addTo(mymap);
+        }
     </script>
   {{ else if eq .service "google" }}
     {{ $opt := "" }}

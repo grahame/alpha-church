@@ -1,9 +1,21 @@
+<div class="herovid-container">
+<video playsinline autoplay muted loop class="herovid">
+    <source src="/videos/churches.mp4" type="video/mp4" />
+    <source src="/videos/churches.webm" type="video/webm" />
+</video>
 <section id="banner">
-  <h2>{{ .Site.Params.title }}</h2>
-  <p>{{ .Site.Params.subtitle }}</p>
-  <ul class="actions special">
-    {{ range .Params.Banner.button }}
-      <li><a href="{{ .url | relURL }}" class="button {{ .type }}">{{ .text }}</a></li>
-    {{ end }}
-  </ul>
+    <div class="herovid-overlay">
+      <h2>{{ .Site.Params.title }}</h2>
+      <p><em>{{ .Site.Params.subtitle | lower }}</em></p>
+      <ul class="actions special">
+        {{ range .Params.Banner.button }}
+        <li>
+          <a href="{{ .url | relURL }}" class="button {{ .type }}"
+            >{{ .text }}</a
+          >
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
 </section>
